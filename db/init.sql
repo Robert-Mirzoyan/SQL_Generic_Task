@@ -85,3 +85,13 @@ INSERT INTO person_country (person_id, country_id) VALUES
     (10, 5), -- Julia - Germany
     (11, 6); -- Alice2 - France
 -- Note: person_id 12 (NoCountryPerson) has no citizenship
+
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255),
+    password VARCHAR(255)
+);
+
+INSERT INTO users (username, password) VALUES
+    ('rob', '12345678'),
+    ('bob', 'password');
